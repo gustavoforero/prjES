@@ -1,7 +1,7 @@
 /*
  *Clase que permite la conexión a la Base de datos.
  */
-package pkgModel;
+package pkgData;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
