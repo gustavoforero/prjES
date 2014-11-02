@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pkgData;
+package pkgDatos;
 
 /**
  *
  * @author kiritoxcii
  */
-public class dbUser {
+public class dbHardware {
     
 }

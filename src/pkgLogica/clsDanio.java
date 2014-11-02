@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pkgData;
+package pkgLogica;
 
 /**
  *
  * @author kiritoxcii
  */
-public class dbHardware {
+public class clsDanio {
     
 }
