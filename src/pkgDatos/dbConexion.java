@@ -1,7 +1,7 @@
 /*
  *Clase que permite la conexión a la Base de datos.
  */
-package pkgData;
+package pkgDatos;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,7 +11,7 @@ import java.sql.SQLException;
  *
  * @author kiritoxcii
  */
-public class dbConnection {
+public class dbConexion {
     
     static String db = "Base del Conocimiento";
 	static String login = "root";
@@ -20,7 +20,7 @@ public class dbConnection {
     
         Connection connection = null;
         
-        	public dbConnection() {
+        	public dbConexion() {
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
 			connection = DriverManager.getConnection(url, login, password);
@@ -34,11 +34,11 @@ public class dbConnection {
 	
 	}
 	
-	public Connection getConnection() {
+	public Connection getConexion() {
 		return connection;
 	}
 	
-	public void disconnect() throws SQLException {
+	public void desconectar() throws SQLException {
 		connection.close();
 	}
 }
