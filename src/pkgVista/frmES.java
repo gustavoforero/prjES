@@ -16,8 +16,16 @@ public class frmES extends javax.swing.JFrame {
     /**
      * Creates new form frmES
      */
+    
+    dbConexion con;
+    
     public frmES() {
         initComponents();
+        
+        con = new dbConexion();
+        jdLogin.setSize(jdLogin.getPreferredSize());
+        jdLogin.setLocationRelativeTo(null);
+        jdLogin.setVisible(true);
     }
 
     /**
@@ -29,21 +37,263 @@ public class frmES extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jdLogin = new javax.swing.JDialog();
+        txtContrasenia = new javax.swing.JPasswordField();
+        txtUsuario = new javax.swing.JTextField();
+        lblUsuario = new javax.swing.JLabel();
+        lblContrasenia = new javax.swing.JLabel();
+        btnIngresar = new javax.swing.JButton();
+        btnSalirLogin = new javax.swing.JButton();
+        jifRecomendaciones = new javax.swing.JInternalFrame();
+        pnlRecomendaciones = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jchb0 = new javax.swing.JCheckBox();
+        jchbOtro = new javax.swing.JCheckBox();
+        btnBuscarSintomas = new javax.swing.JButton();
+        jdpPrincipal = new javax.swing.JDesktopPane();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        listaDanios = new javax.swing.JList();
+        jLabel1 = new javax.swing.JLabel();
+        btnConsultarDanio = new javax.swing.JButton();
+        jmbPrincipal = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
+
+        jdLogin.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        jdLogin.setTitle("LOGIN");
+        jdLogin.setResizable(false);
+
+        txtUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUsuarioActionPerformed(evt);
+            }
+        });
+
+        lblUsuario.setText("Usuario:");
+
+        lblContrasenia.setText("Contraseña:");
+
+        btnIngresar.setText("Ingresar");
+        btnIngresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIngresarActionPerformed(evt);
+            }
+        });
+
+        btnSalirLogin.setText("Salir");
+
+        javax.swing.GroupLayout jdLoginLayout = new javax.swing.GroupLayout(jdLogin.getContentPane());
+        jdLogin.getContentPane().setLayout(jdLoginLayout);
+        jdLoginLayout.setHorizontalGroup(
+            jdLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jdLoginLayout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(btnIngresar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnSalirLogin)
+                .addGap(105, 105, 105))
+            .addGroup(jdLoginLayout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addGroup(jdLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblUsuario)
+                    .addComponent(lblContrasenia))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+                .addGroup(jdLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(57, 57, 57))
+        );
+        jdLoginLayout.setVerticalGroup(
+            jdLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdLoginLayout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addGroup(jdLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblUsuario))
+                .addGap(28, 28, 28)
+                .addGroup(jdLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblContrasenia)
+                    .addComponent(txtContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(59, 59, 59)
+                .addGroup(jdLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSalirLogin)
+                    .addComponent(btnIngresar))
+                .addContainerGap(71, Short.MAX_VALUE))
+        );
+
+        jifRecomendaciones.setClosable(true);
+        jifRecomendaciones.setTitle("RECOMENDACIONES");
+        jifRecomendaciones.setVisible(true);
+
+        javax.swing.GroupLayout pnlRecomendacionesLayout = new javax.swing.GroupLayout(pnlRecomendaciones);
+        pnlRecomendaciones.setLayout(pnlRecomendacionesLayout);
+        pnlRecomendacionesLayout.setHorizontalGroup(
+            pnlRecomendacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        pnlRecomendacionesLayout.setVerticalGroup(
+            pnlRecomendacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        jLabel2.setText("Marcar síntomas");
+
+        jchb0.setText("Síntoma");
+        jchb0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jchb0ActionPerformed(evt);
+            }
+        });
+
+        jchbOtro.setText("Otro");
+        jchbOtro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jchbOtroActionPerformed(evt);
+            }
+        });
+
+        btnBuscarSintomas.setText("Buscar");
+
+        javax.swing.GroupLayout jifRecomendacionesLayout = new javax.swing.GroupLayout(jifRecomendaciones.getContentPane());
+        jifRecomendaciones.getContentPane().setLayout(jifRecomendacionesLayout);
+        jifRecomendacionesLayout.setHorizontalGroup(
+            jifRecomendacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jifRecomendacionesLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jchbOtro)
+                .addGap(28, 28, 28)
+                .addComponent(btnBuscarSintomas)
+                .addGap(44, 44, 44))
+            .addGroup(jifRecomendacionesLayout.createSequentialGroup()
+                .addGroup(jifRecomendacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jifRecomendacionesLayout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(jchb0))
+                    .addGroup(jifRecomendacionesLayout.createSequentialGroup()
+                        .addGap(272, 272, 272)
+                        .addComponent(jLabel2)))
+                .addContainerGap(283, Short.MAX_VALUE))
+            .addGroup(jifRecomendacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jifRecomendacionesLayout.createSequentialGroup()
+                    .addGap(0, 279, Short.MAX_VALUE)
+                    .addComponent(pnlRecomendaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 280, Short.MAX_VALUE)))
+        );
+        jifRecomendacionesLayout.setVerticalGroup(
+            jifRecomendacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jifRecomendacionesLayout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
+                .addComponent(jchb0)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 204, Short.MAX_VALUE)
+                .addGroup(jifRecomendacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jchbOtro)
+                    .addComponent(btnBuscarSintomas))
+                .addGap(67, 67, 67))
+            .addGroup(jifRecomendacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jifRecomendacionesLayout.createSequentialGroup()
+                    .addGap(0, 138, Short.MAX_VALUE)
+                    .addComponent(pnlRecomendaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 139, Short.MAX_VALUE)))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        listaDanios.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(listaDanios);
+
+        jLabel1.setText("Daños");
+
+        btnConsultarDanio.setText("Consultar");
+        btnConsultarDanio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsultarDanioActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jdpPrincipalLayout = new javax.swing.GroupLayout(jdpPrincipal);
+        jdpPrincipal.setLayout(jdpPrincipalLayout);
+        jdpPrincipalLayout.setHorizontalGroup(
+            jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jdpPrincipalLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addGroup(jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jdpPrincipalLayout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 484, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(198, 198, 198)
+                        .addComponent(btnConsultarDanio))
+                    .addComponent(jLabel1))
+                .addContainerGap(206, Short.MAX_VALUE))
+        );
+        jdpPrincipalLayout.setVerticalGroup(
+            jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpPrincipalLayout.createSequentialGroup()
+                .addContainerGap(39, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGroup(jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jdpPrincipalLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jdpPrincipalLayout.createSequentialGroup()
+                        .addGap(168, 168, 168)
+                        .addComponent(btnConsultarDanio)))
+                .addGap(22, 22, 22))
+        );
+        jdpPrincipal.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpPrincipal.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpPrincipal.setLayer(btnConsultarDanio, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        jMenu1.setText("File");
+        jmbPrincipal.add(jMenu1);
+
+        jMenu2.setText("Edit");
+        jmbPrincipal.add(jMenu2);
+
+        setJMenuBar(jmbPrincipal);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 625, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jdpPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 394, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jdpPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUsuarioActionPerformed
+
+    private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
+       
+       new frmES().setVisible(true);
+    }//GEN-LAST:event_btnIngresarActionPerformed
+
+    private void jchb0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jchb0ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jchb0ActionPerformed
+
+    private void btnConsultarDanioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarDanioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnConsultarDanioActionPerformed
+
+    private void jchbOtroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jchbOtroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jchbOtroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -75,11 +325,57 @@ public class frmES extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmES().setVisible(true);
+                new frmES().setVisible(false);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBuscarSintomas;
+    private javax.swing.JButton btnConsultarDanio;
+    private javax.swing.JButton btnIngresar;
+    private javax.swing.JButton btnSalirLogin;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JCheckBox jchb0;
+    private javax.swing.JCheckBox jchbOtro;
+    private javax.swing.JDialog jdLogin;
+    private javax.swing.JDesktopPane jdpPrincipal;
+    private javax.swing.JInternalFrame jifRecomendaciones;
+    private javax.swing.JMenuBar jmbPrincipal;
+    private javax.swing.JLabel lblContrasenia;
+    private javax.swing.JLabel lblUsuario;
+    private javax.swing.JList listaDanios;
+    private javax.swing.JPanel pnlRecomendaciones;
+    private javax.swing.JPasswordField txtContrasenia;
+    private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
+/*
+    Agregar un internal frame a un desktop pane
+    jdpPrimero.add(jifPrestamo);
+         jifPrestamo.setSize(jifPrestamo.getPreferredSize());                
+         try {
+            jifPrestamo.setSelected(true);
+        } catch (PropertyVetoException ex) {
+            Logger.getLogger(frmSistemaCentroCultural.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    
+    Metodo para validar contrasenia
+    
+     public boolean passwordCorrecta(char[] password, clsAdministrador admin) {
+   boolean esCorrecta;
+   if (password.length != admin.getPassword().length) {
+       esCorrecta = false;
+   } else {
+       esCorrecta = Arrays.equals(password, admin.getPassword());
+   }
+   return esCorrecta;
+}
+    
+    */
+    
+    
 }
