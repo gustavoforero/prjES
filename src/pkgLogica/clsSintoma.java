@@ -9,13 +9,13 @@ package pkgLogica;
  *
  * @author kiritoxcii
  */
-public class clsHardware {
+public class clsSintoma {
     
     private int id;
     private String descripcion;
-    private String nombre;
+    private clsDanio idDanio;
 
-    public clsHardware() {
+    public clsSintoma() {
     }
 
     public int getId() {
@@ -34,12 +34,12 @@ public class clsHardware {
         this.descripcion = descripcion;
     }
 
-    public String getNombre() {
-        return nombre;
+    public clsDanio getIdDanio() {
+        return idDanio;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setIdDanio(clsDanio idDanio) {
+        this.idDanio = idDanio;
     }
     
     

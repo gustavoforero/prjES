@@ -11,4 +11,27 @@ package pkgLogica;
  */
 public class clsRecomendacion {
     
+    private int id;
+    private String definicion;
+
+    public clsRecomendacion() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getDefinicion() {
+        return definicion;
+    }
+
+    public void setDefinicion(String definicion) {
+        this.definicion = definicion;
+    }
+    
+    
 }
