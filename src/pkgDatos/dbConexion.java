@@ -18,14 +18,14 @@ public class dbConexion {
 	static String password = "12345";
 	static String url = "jdbc:mysql://localhost/" + db;
     
-        Connection connection = null;
+        Connection conexion = null;
         
         	public dbConexion() {
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
-			connection = DriverManager.getConnection(url, login, password);
+			conexion = DriverManager.getConnection(url, login, password);
 			
-			if(connection != null){
+			if(conexion != null){
 				System.out.println("Conexión a la base de datos "+ db + " OK");
 			}
 		}catch( SQLException | ClassNotFoundException e){
@@ -35,10 +35,10 @@ public class dbConexion {
 	}
 	
 	public Connection getConexion() {
-		return connection;
+		return conexion;
 	}
 	
 	public void desconectar() throws SQLException {
-		connection.close();
+		conexion.close();
 	}
 }

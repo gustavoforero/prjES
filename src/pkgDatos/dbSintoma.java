@@ -9,6 +9,6 @@ package pkgDatos;
  *
  * @author kiritoxcii
  */
-public class dbrDanReco {
+public class dbSintoma {
     
 }
