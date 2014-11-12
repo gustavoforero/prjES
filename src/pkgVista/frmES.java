@@ -44,12 +44,15 @@ public class frmES extends javax.swing.JFrame {
         lblContrasenia = new javax.swing.JLabel();
         btnIngresar = new javax.swing.JButton();
         btnSalirLogin = new javax.swing.JButton();
-        jifRecomendaciones = new javax.swing.JInternalFrame();
+        jifPreguntas = new javax.swing.JInternalFrame();
         pnlRecomendaciones = new javax.swing.JPanel();
+        lblPreguntas = new javax.swing.JLabel();
+        btnSi = new javax.swing.JButton();
+        btnNo = new javax.swing.JButton();
+        jdRecomendacion = new javax.swing.JDialog();
+        pnlRecomendacion = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jchb0 = new javax.swing.JCheckBox();
-        jchbOtro = new javax.swing.JCheckBox();
-        btnBuscarSintomas = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jdpPrincipal = new javax.swing.JDesktopPane();
         jScrollPane1 = new javax.swing.JScrollPane();
         listaDanios = new javax.swing.JList();
@@ -121,9 +124,9 @@ public class frmES extends javax.swing.JFrame {
                 .addContainerGap(71, Short.MAX_VALUE))
         );
 
-        jifRecomendaciones.setClosable(true);
-        jifRecomendaciones.setTitle("RECOMENDACIONES");
-        jifRecomendaciones.setVisible(true);
+        jifPreguntas.setClosable(true);
+        jifPreguntas.setTitle("RESPONDER");
+        jifPreguntas.setVisible(true);
 
         javax.swing.GroupLayout pnlRecomendacionesLayout = new javax.swing.GroupLayout(pnlRecomendaciones);
         pnlRecomendaciones.setLayout(pnlRecomendacionesLayout);
@@ -136,66 +139,87 @@ public class frmES extends javax.swing.JFrame {
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
-        jLabel2.setText("Marcar síntomas");
+        lblPreguntas.setText("Aquí irán las preguntas al usuario");
 
-        jchb0.setText("Síntoma");
-        jchb0.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jchb0ActionPerformed(evt);
-            }
-        });
+        btnSi.setText("Sí");
 
-        jchbOtro.setText("Otro");
-        jchbOtro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jchbOtroActionPerformed(evt);
-            }
-        });
+        btnNo.setText("No");
 
-        btnBuscarSintomas.setText("Buscar");
-
-        javax.swing.GroupLayout jifRecomendacionesLayout = new javax.swing.GroupLayout(jifRecomendaciones.getContentPane());
-        jifRecomendaciones.getContentPane().setLayout(jifRecomendacionesLayout);
-        jifRecomendacionesLayout.setHorizontalGroup(
-            jifRecomendacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jifRecomendacionesLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jchbOtro)
-                .addGap(28, 28, 28)
-                .addComponent(btnBuscarSintomas)
-                .addGap(44, 44, 44))
-            .addGroup(jifRecomendacionesLayout.createSequentialGroup()
-                .addGroup(jifRecomendacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jifRecomendacionesLayout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(jchb0))
-                    .addGroup(jifRecomendacionesLayout.createSequentialGroup()
-                        .addGap(272, 272, 272)
-                        .addComponent(jLabel2)))
-                .addContainerGap(283, Short.MAX_VALUE))
-            .addGroup(jifRecomendacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jifRecomendacionesLayout.createSequentialGroup()
-                    .addGap(0, 279, Short.MAX_VALUE)
-                    .addComponent(pnlRecomendaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 280, Short.MAX_VALUE)))
+        javax.swing.GroupLayout jifPreguntasLayout = new javax.swing.GroupLayout(jifPreguntas.getContentPane());
+        jifPreguntas.getContentPane().setLayout(jifPreguntasLayout);
+        jifPreguntasLayout.setHorizontalGroup(
+            jifPreguntasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jifPreguntasLayout.createSequentialGroup()
+                .addGroup(jifPreguntasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jifPreguntasLayout.createSequentialGroup()
+                        .addGap(131, 131, 131)
+                        .addComponent(lblPreguntas, javax.swing.GroupLayout.PREFERRED_SIZE, 426, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(52, 52, 52)
+                        .addComponent(pnlRecomendaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jifPreguntasLayout.createSequentialGroup()
+                        .addGap(200, 200, 200)
+                        .addComponent(btnSi)
+                        .addGap(159, 159, 159)
+                        .addComponent(btnNo)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
-        jifRecomendacionesLayout.setVerticalGroup(
-            jifRecomendacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jifRecomendacionesLayout.createSequentialGroup()
+        jifPreguntasLayout.setVerticalGroup(
+            jifPreguntasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jifPreguntasLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(pnlRecomendaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 276, Short.MAX_VALUE))
+            .addGroup(jifPreguntasLayout.createSequentialGroup()
+                .addGap(81, 81, 81)
+                .addComponent(lblPreguntas, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(94, 94, 94)
+                .addGroup(jifPreguntasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSi)
+                    .addComponent(btnNo))
+                .addContainerGap(98, Short.MAX_VALUE))
+        );
+
+        jLabel2.setText("Aquí va la recomendación, si hay más cambien por un JList");
+
+        jButton1.setText("Aceptar");
+
+        javax.swing.GroupLayout pnlRecomendacionLayout = new javax.swing.GroupLayout(pnlRecomendacion);
+        pnlRecomendacion.setLayout(pnlRecomendacionLayout);
+        pnlRecomendacionLayout.setHorizontalGroup(
+            pnlRecomendacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlRecomendacionLayout.createSequentialGroup()
+                .addContainerGap(111, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(83, 83, 83))
+            .addGroup(pnlRecomendacionLayout.createSequentialGroup()
+                .addGap(268, 268, 268)
+                .addComponent(jButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pnlRecomendacionLayout.setVerticalGroup(
+            pnlRecomendacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlRecomendacionLayout.createSequentialGroup()
                 .addGap(28, 28, 28)
-                .addComponent(jLabel2)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jchb0)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 204, Short.MAX_VALUE)
-                .addGroup(jifRecomendacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jchbOtro)
-                    .addComponent(btnBuscarSintomas))
-                .addGap(67, 67, 67))
-            .addGroup(jifRecomendacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jifRecomendacionesLayout.createSequentialGroup()
-                    .addGap(0, 138, Short.MAX_VALUE)
-                    .addComponent(pnlRecomendaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 139, Short.MAX_VALUE)))
+                .addComponent(jButton1)
+                .addContainerGap(47, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jdRecomendacionLayout = new javax.swing.GroupLayout(jdRecomendacion.getContentPane());
+        jdRecomendacion.getContentPane().setLayout(jdRecomendacionLayout);
+        jdRecomendacionLayout.setHorizontalGroup(
+            jdRecomendacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jdRecomendacionLayout.createSequentialGroup()
+                .addComponent(pnlRecomendacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jdRecomendacionLayout.setVerticalGroup(
+            jdRecomendacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jdRecomendacionLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pnlRecomendacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -207,7 +231,8 @@ public class frmES extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(listaDanios);
 
-        jLabel1.setText("Daños");
+        jLabel1.setFont(new java.awt.Font("DejaVu Sans", 1, 24)); // NOI18N
+        jLabel1.setText("DAÑOS");
 
         btnConsultarDanio.setText("Consultar");
         btnConsultarDanio.addActionListener(new java.awt.event.ActionListener() {
@@ -221,28 +246,29 @@ public class frmES extends javax.swing.JFrame {
         jdpPrincipalLayout.setHorizontalGroup(
             jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jdpPrincipalLayout.createSequentialGroup()
-                .addGap(31, 31, 31)
                 .addGroup(jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jdpPrincipalLayout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 484, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(198, 198, 198)
-                        .addComponent(btnConsultarDanio))
-                    .addComponent(jLabel1))
-                .addContainerGap(206, Short.MAX_VALUE))
+                        .addGap(17, 17, 17)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 858, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jdpPrincipalLayout.createSequentialGroup()
+                        .addGap(431, 431, 431)
+                        .addComponent(jLabel1)))
+                .addContainerGap(30, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpPrincipalLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnConsultarDanio)
+                .addGap(390, 390, 390))
         );
         jdpPrincipalLayout.setVerticalGroup(
             jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpPrincipalLayout.createSequentialGroup()
-                .addContainerGap(39, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGroup(jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jdpPrincipalLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jdpPrincipalLayout.createSequentialGroup()
-                        .addGap(168, 168, 168)
-                        .addComponent(btnConsultarDanio)))
-                .addGap(22, 22, 22))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(55, 55, 55)
+                .addComponent(btnConsultarDanio)
+                .addGap(83, 83, 83))
         );
         jdpPrincipal.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jdpPrincipal.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -260,9 +286,7 @@ public class frmES extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jdpPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jdpPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -283,17 +307,9 @@ public class frmES extends javax.swing.JFrame {
        new frmES().setVisible(true);
     }//GEN-LAST:event_btnIngresarActionPerformed
 
-    private void jchb0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jchb0ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jchb0ActionPerformed
-
     private void btnConsultarDanioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarDanioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnConsultarDanioActionPerformed
-
-    private void jchbOtroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jchbOtroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jchbOtroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -331,24 +347,27 @@ public class frmES extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBuscarSintomas;
     private javax.swing.JButton btnConsultarDanio;
     private javax.swing.JButton btnIngresar;
+    private javax.swing.JButton btnNo;
     private javax.swing.JButton btnSalirLogin;
+    private javax.swing.JButton btnSi;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JCheckBox jchb0;
-    private javax.swing.JCheckBox jchbOtro;
     private javax.swing.JDialog jdLogin;
+    private javax.swing.JDialog jdRecomendacion;
     private javax.swing.JDesktopPane jdpPrincipal;
-    private javax.swing.JInternalFrame jifRecomendaciones;
+    private javax.swing.JInternalFrame jifPreguntas;
     private javax.swing.JMenuBar jmbPrincipal;
     private javax.swing.JLabel lblContrasenia;
+    private javax.swing.JLabel lblPreguntas;
     private javax.swing.JLabel lblUsuario;
     private javax.swing.JList listaDanios;
+    private javax.swing.JPanel pnlRecomendacion;
     private javax.swing.JPanel pnlRecomendaciones;
     private javax.swing.JPasswordField txtContrasenia;
     private javax.swing.JTextField txtUsuario;
