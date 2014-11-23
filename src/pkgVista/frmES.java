@@ -23,10 +23,7 @@ public class frmES extends javax.swing.JFrame {
         initComponents();
         
         con = new dbConexion();
-        jdLogin.setSize(jdLogin.getPreferredSize());
-        jdLogin.setLocationRelativeTo(null);
-        jdLogin.setVisible(true);
-    }
+            }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -37,244 +34,224 @@ public class frmES extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jdLogin = new javax.swing.JDialog();
-        txtContrasenia = new javax.swing.JPasswordField();
-        txtUsuario = new javax.swing.JTextField();
-        lblUsuario = new javax.swing.JLabel();
-        lblContrasenia = new javax.swing.JLabel();
-        btnIngresar = new javax.swing.JButton();
-        btnSalirLogin = new javax.swing.JButton();
-        jifPreguntas = new javax.swing.JInternalFrame();
-        pnlRecomendaciones = new javax.swing.JPanel();
-        lblPreguntas = new javax.swing.JLabel();
-        btnSi = new javax.swing.JButton();
-        btnNo = new javax.swing.JButton();
-        jdRecomendacion = new javax.swing.JDialog();
-        pnlRecomendacion = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         jdpPrincipal = new javax.swing.JDesktopPane();
+        lblMarca = new javax.swing.JLabel();
+        lblRam = new javax.swing.JLabel();
+        lblModelo = new javax.swing.JLabel();
+        lblBoard = new javax.swing.JLabel();
+        lblProcesador = new javax.swing.JLabel();
+        lblDiscoD = new javax.swing.JLabel();
+        txtMarca = new javax.swing.JTextField();
+        txtModelo = new javax.swing.JTextField();
+        txtRam = new javax.swing.JTextField();
+        txtBoard = new javax.swing.JTextField();
+        txtProcesador = new javax.swing.JTextField();
+        txtDiscoD = new javax.swing.JTextField();
+        lblFuenteP = new javax.swing.JLabel();
+        txtFuenteP = new javax.swing.JTextField();
+        lblSintomas = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        listaDanios = new javax.swing.JList();
-        jLabel1 = new javax.swing.JLabel();
-        btnConsultarDanio = new javax.swing.JButton();
+        jlSintomas = new javax.swing.JList();
+        lblDatosdelEquipo = new javax.swing.JLabel();
+        btnConsultar = new javax.swing.JButton();
+        btnAgregarEquipo = new javax.swing.JButton();
         jmbPrincipal = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
 
-        jdLogin.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        jdLogin.setTitle("LOGIN");
-        jdLogin.setResizable(false);
-
-        txtUsuario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUsuarioActionPerformed(evt);
-            }
-        });
-
-        lblUsuario.setText("Usuario:");
-
-        lblContrasenia.setText("Contraseña:");
-
-        btnIngresar.setText("Ingresar");
-        btnIngresar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnIngresarActionPerformed(evt);
-            }
-        });
-
-        btnSalirLogin.setText("Salir");
-
-        javax.swing.GroupLayout jdLoginLayout = new javax.swing.GroupLayout(jdLogin.getContentPane());
-        jdLogin.getContentPane().setLayout(jdLoginLayout);
-        jdLoginLayout.setHorizontalGroup(
-            jdLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jdLoginLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(btnIngresar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnSalirLogin)
-                .addGap(105, 105, 105))
-            .addGroup(jdLoginLayout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addGroup(jdLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblUsuario)
-                    .addComponent(lblContrasenia))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
-                .addGroup(jdLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(57, 57, 57))
-        );
-        jdLoginLayout.setVerticalGroup(
-            jdLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdLoginLayout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addGroup(jdLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblUsuario))
-                .addGap(28, 28, 28)
-                .addGroup(jdLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblContrasenia)
-                    .addComponent(txtContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(59, 59, 59)
-                .addGroup(jdLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSalirLogin)
-                    .addComponent(btnIngresar))
-                .addContainerGap(71, Short.MAX_VALUE))
-        );
-
-        jifPreguntas.setClosable(true);
-        jifPreguntas.setTitle("RESPONDER");
-        jifPreguntas.setVisible(true);
-
-        javax.swing.GroupLayout pnlRecomendacionesLayout = new javax.swing.GroupLayout(pnlRecomendaciones);
-        pnlRecomendaciones.setLayout(pnlRecomendacionesLayout);
-        pnlRecomendacionesLayout.setHorizontalGroup(
-            pnlRecomendacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        pnlRecomendacionesLayout.setVerticalGroup(
-            pnlRecomendacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        lblPreguntas.setText("Aquí irán las preguntas al usuario");
-
-        btnSi.setText("Sí");
-
-        btnNo.setText("No");
-
-        javax.swing.GroupLayout jifPreguntasLayout = new javax.swing.GroupLayout(jifPreguntas.getContentPane());
-        jifPreguntas.getContentPane().setLayout(jifPreguntasLayout);
-        jifPreguntasLayout.setHorizontalGroup(
-            jifPreguntasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jifPreguntasLayout.createSequentialGroup()
-                .addGroup(jifPreguntasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jifPreguntasLayout.createSequentialGroup()
-                        .addGap(131, 131, 131)
-                        .addComponent(lblPreguntas, javax.swing.GroupLayout.PREFERRED_SIZE, 426, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(52, 52, 52)
-                        .addComponent(pnlRecomendaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jifPreguntasLayout.createSequentialGroup()
-                        .addGap(200, 200, 200)
-                        .addComponent(btnSi)
-                        .addGap(159, 159, 159)
-                        .addComponent(btnNo)))
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jifPreguntasLayout.setVerticalGroup(
-            jifPreguntasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jifPreguntasLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(pnlRecomendaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 276, Short.MAX_VALUE))
-            .addGroup(jifPreguntasLayout.createSequentialGroup()
-                .addGap(81, 81, 81)
-                .addComponent(lblPreguntas, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(94, 94, 94)
-                .addGroup(jifPreguntasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSi)
-                    .addComponent(btnNo))
-                .addContainerGap(98, Short.MAX_VALUE))
-        );
-
-        jLabel2.setText("Aquí va la recomendación, si hay más cambien por un JList");
-
-        jButton1.setText("Aceptar");
-
-        javax.swing.GroupLayout pnlRecomendacionLayout = new javax.swing.GroupLayout(pnlRecomendacion);
-        pnlRecomendacion.setLayout(pnlRecomendacionLayout);
-        pnlRecomendacionLayout.setHorizontalGroup(
-            pnlRecomendacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlRecomendacionLayout.createSequentialGroup()
-                .addContainerGap(111, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(83, 83, 83))
-            .addGroup(pnlRecomendacionLayout.createSequentialGroup()
-                .addGap(268, 268, 268)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        pnlRecomendacionLayout.setVerticalGroup(
-            pnlRecomendacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlRecomendacionLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addContainerGap(47, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout jdRecomendacionLayout = new javax.swing.GroupLayout(jdRecomendacion.getContentPane());
-        jdRecomendacion.getContentPane().setLayout(jdRecomendacionLayout);
-        jdRecomendacionLayout.setHorizontalGroup(
-            jdRecomendacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jdRecomendacionLayout.createSequentialGroup()
-                .addComponent(pnlRecomendacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jdRecomendacionLayout.setVerticalGroup(
-            jdRecomendacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jdRecomendacionLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(pnlRecomendacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        listaDanios.setModel(new javax.swing.AbstractListModel() {
+        lblMarca.setText("Marca:");
+
+        lblRam.setText("RAM:");
+
+        lblModelo.setText("Modelo:");
+
+        lblBoard.setText("Board:");
+
+        lblProcesador.setText("Procesador:");
+
+        lblDiscoD.setText("Disco Duro:");
+
+        txtMarca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtMarcaActionPerformed(evt);
+            }
+        });
+
+        txtModelo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtModeloActionPerformed(evt);
+            }
+        });
+
+        txtRam.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtRamActionPerformed(evt);
+            }
+        });
+
+        txtBoard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtBoardActionPerformed(evt);
+            }
+        });
+
+        txtProcesador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtProcesadorActionPerformed(evt);
+            }
+        });
+
+        txtDiscoD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDiscoDActionPerformed(evt);
+            }
+        });
+
+        lblFuenteP.setText("Fuente de Poder:");
+
+        txtFuenteP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFuentePActionPerformed(evt);
+            }
+        });
+
+        lblSintomas.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        lblSintomas.setText("SÍNTOMAS");
+
+        jlSintomas.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane1.setViewportView(listaDanios);
+        jScrollPane1.setViewportView(jlSintomas);
 
-        jLabel1.setFont(new java.awt.Font("DejaVu Sans", 1, 24)); // NOI18N
-        jLabel1.setText("DAÑOS");
+        lblDatosdelEquipo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        lblDatosdelEquipo.setText("DATOS DEL EQUIPO...");
 
-        btnConsultarDanio.setText("Consultar");
-        btnConsultarDanio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnConsultarDanioActionPerformed(evt);
-            }
-        });
+        btnConsultar.setText("Consultar");
+
+        btnAgregarEquipo.setText("Agregar");
 
         javax.swing.GroupLayout jdpPrincipalLayout = new javax.swing.GroupLayout(jdpPrincipal);
         jdpPrincipal.setLayout(jdpPrincipalLayout);
         jdpPrincipalLayout.setHorizontalGroup(
             jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jdpPrincipalLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpPrincipalLayout.createSequentialGroup()
                 .addGroup(jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jdpPrincipalLayout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 858, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(41, 41, 41)
+                        .addGroup(jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblMarca)
+                            .addComponent(lblModelo)
+                            .addComponent(lblDiscoD)
+                            .addComponent(lblProcesador)
+                            .addComponent(lblBoard)
+                            .addComponent(lblRam)
+                            .addComponent(lblFuenteP))
+                        .addGap(75, 75, 75)
+                        .addGroup(jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtFuenteP, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtDiscoD, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtProcesador, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtRam, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtBoard, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtModelo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jdpPrincipalLayout.createSequentialGroup()
-                        .addGap(431, 431, 431)
-                        .addComponent(jLabel1)))
-                .addContainerGap(30, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpPrincipalLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnConsultarDanio)
-                .addGap(390, 390, 390))
+                        .addGap(122, 122, 122)
+                        .addComponent(btnAgregarEquipo)
+                        .addGap(155, 155, 155)
+                        .addComponent(btnConsultar)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE)
+                .addGroup(jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblSintomas)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(100, 100, 100))
+            .addGroup(jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jdpPrincipalLayout.createSequentialGroup()
+                    .addGap(51, 51, 51)
+                    .addComponent(lblDatosdelEquipo)
+                    .addContainerGap(845, Short.MAX_VALUE)))
         );
         jdpPrincipalLayout.setVerticalGroup(
             jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpPrincipalLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55)
-                .addComponent(btnConsultarDanio)
-                .addGap(83, 83, 83))
+            .addGroup(jdpPrincipalLayout.createSequentialGroup()
+                .addGroup(jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jdpPrincipalLayout.createSequentialGroup()
+                        .addGroup(jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jdpPrincipalLayout.createSequentialGroup()
+                                .addGap(103, 103, 103)
+                                .addComponent(lblMarca))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpPrincipalLayout.createSequentialGroup()
+                                .addGap(85, 85, 85)
+                                .addComponent(txtMarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addGroup(jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jdpPrincipalLayout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addComponent(lblModelo)
+                                .addGap(18, 18, 18)
+                                .addComponent(lblRam)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblBoard)
+                                .addGap(18, 18, 18)
+                                .addComponent(lblProcesador)
+                                .addGap(18, 18, 18)
+                                .addComponent(lblDiscoD))
+                            .addGroup(jdpPrincipalLayout.createSequentialGroup()
+                                .addComponent(txtModelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtRam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtBoard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtProcesador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtDiscoD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(txtFuenteP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblFuenteP))))
+                        .addGap(50, 50, 50)
+                        .addGroup(jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnConsultar)
+                            .addComponent(btnAgregarEquipo)))
+                    .addGroup(jdpPrincipalLayout.createSequentialGroup()
+                        .addGap(54, 54, 54)
+                        .addComponent(lblSintomas)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 98, Short.MAX_VALUE))
+            .addGroup(jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jdpPrincipalLayout.createSequentialGroup()
+                    .addGap(46, 46, 46)
+                    .addComponent(lblDatosdelEquipo)
+                    .addContainerGap(462, Short.MAX_VALUE)))
         );
+        jdpPrincipal.setLayer(lblMarca, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpPrincipal.setLayer(lblRam, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpPrincipal.setLayer(lblModelo, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpPrincipal.setLayer(lblBoard, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpPrincipal.setLayer(lblProcesador, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpPrincipal.setLayer(lblDiscoD, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpPrincipal.setLayer(txtMarca, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpPrincipal.setLayer(txtModelo, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpPrincipal.setLayer(txtRam, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpPrincipal.setLayer(txtBoard, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpPrincipal.setLayer(txtProcesador, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpPrincipal.setLayer(txtDiscoD, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpPrincipal.setLayer(lblFuenteP, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpPrincipal.setLayer(txtFuenteP, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpPrincipal.setLayer(lblSintomas, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jdpPrincipal.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpPrincipal.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpPrincipal.setLayer(btnConsultarDanio, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpPrincipal.setLayer(lblDatosdelEquipo, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpPrincipal.setLayer(btnConsultar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpPrincipal.setLayer(btnAgregarEquipo, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jMenu1.setText("File");
+        jMenu1.setText("/");
         jmbPrincipal.add(jMenu1);
 
         jMenu2.setText("Edit");
@@ -286,30 +263,47 @@ public class frmES extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jdpPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jdpPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jdpPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 12, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
+    private void txtMarcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMarcaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtUsuarioActionPerformed
+    }//GEN-LAST:event_txtMarcaActionPerformed
 
-    private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
-       
-       new frmES().setVisible(true);
-    }//GEN-LAST:event_btnIngresarActionPerformed
-
-    private void btnConsultarDanioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarDanioActionPerformed
+    private void txtModeloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtModeloActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnConsultarDanioActionPerformed
+    }//GEN-LAST:event_txtModeloActionPerformed
+
+    private void txtRamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRamActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtRamActionPerformed
+
+    private void txtBoardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBoardActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtBoardActionPerformed
+
+    private void txtProcesadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtProcesadorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtProcesadorActionPerformed
+
+    private void txtDiscoDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDiscoDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDiscoDActionPerformed
+
+    private void txtFuentePActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFuentePActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFuentePActionPerformed
 
     /**
      * @param args the command line arguments
@@ -347,30 +341,30 @@ public class frmES extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnConsultarDanio;
-    private javax.swing.JButton btnIngresar;
-    private javax.swing.JButton btnNo;
-    private javax.swing.JButton btnSalirLogin;
-    private javax.swing.JButton btnSi;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton btnAgregarEquipo;
+    private javax.swing.JButton btnConsultar;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JDialog jdLogin;
-    private javax.swing.JDialog jdRecomendacion;
     private javax.swing.JDesktopPane jdpPrincipal;
-    private javax.swing.JInternalFrame jifPreguntas;
+    private javax.swing.JList jlSintomas;
     private javax.swing.JMenuBar jmbPrincipal;
-    private javax.swing.JLabel lblContrasenia;
-    private javax.swing.JLabel lblPreguntas;
-    private javax.swing.JLabel lblUsuario;
-    private javax.swing.JList listaDanios;
-    private javax.swing.JPanel pnlRecomendacion;
-    private javax.swing.JPanel pnlRecomendaciones;
-    private javax.swing.JPasswordField txtContrasenia;
-    private javax.swing.JTextField txtUsuario;
+    private javax.swing.JLabel lblBoard;
+    private javax.swing.JLabel lblDatosdelEquipo;
+    private javax.swing.JLabel lblDiscoD;
+    private javax.swing.JLabel lblFuenteP;
+    private javax.swing.JLabel lblMarca;
+    private javax.swing.JLabel lblModelo;
+    private javax.swing.JLabel lblProcesador;
+    private javax.swing.JLabel lblRam;
+    private javax.swing.JLabel lblSintomas;
+    private javax.swing.JTextField txtBoard;
+    private javax.swing.JTextField txtDiscoD;
+    private javax.swing.JTextField txtFuenteP;
+    private javax.swing.JTextField txtMarca;
+    private javax.swing.JTextField txtModelo;
+    private javax.swing.JTextField txtProcesador;
+    private javax.swing.JTextField txtRam;
     // End of variables declaration//GEN-END:variables
 /*
     Agregar un internal frame a un desktop pane

@@ -12,7 +12,7 @@ import pkgLogica.clsUsuario;
 /**
  *
  * @author kiritoxcii
- */
+ *
 public class dbUsuario {
     
      dbConexion cn;
@@ -51,7 +51,7 @@ public class dbUsuario {
         return u;
     }
     
-     /** trae todos los registros de la tabla contactos */
+     /** trae todos los registros de la tabla contactos *
      public clsUsuario[] getContactos(){
         int registros = 0;
 
@@ -210,4 +210,4 @@ public class dbUsuario {
         
         return resultado;
     }
-}
+}*/

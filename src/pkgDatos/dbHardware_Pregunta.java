@@ -9,6 +9,6 @@ package pkgDatos;
  *
  * @author kiritoxcii
  */
-public class dbDanio {
+public class dbHardware_Pregunta {
     
 }

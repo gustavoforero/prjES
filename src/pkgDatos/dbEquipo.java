@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pkgLogica;
+package pkgDatos;
 
 /**
  *
  * @author kiritoxcii
  */
-public class clsNodo {
+public class dbEquipo {
     
+   
 }

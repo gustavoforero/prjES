@@ -9,6 +9,6 @@ package pkgDatos;
  *
  * @author kiritoxcii
  */
-public class dbRecomendacion {
+public class dbSintoma_Hardware {
     
 }
