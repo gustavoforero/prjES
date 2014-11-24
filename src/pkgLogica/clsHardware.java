@@ -11,19 +11,28 @@ package pkgLogica;
  */
 public class clsHardware {
     
-    private int id;
-    private String descripcion;
+    private int idHardware;
     private String nombre;
+    private String descripcion;
+    private boolean estado;
 
     public clsHardware() {
     }
 
-    public int getId() {
-        return id;
+    public int getIdHardware() {
+        return idHardware;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdHardware(int idHardware) {
+        this.idHardware = idHardware;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getDescripcion() {
@@ -34,13 +43,14 @@ public class clsHardware {
         this.descripcion = descripcion;
     }
 
-    public String getNombre() {
-        return nombre;
+    public boolean isEstado() {
+        return estado;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setEstado(boolean estado) {
+        this.estado = estado;
     }
+    
     
     
 }

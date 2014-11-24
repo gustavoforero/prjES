@@ -9,21 +9,20 @@ package pkgLogica;
  *
  * @author kiritoxcii
  */
-public class clsSintoma {
+public class clsPregunta {
     
-    private int idSintoma;
+    private int idPregunta;
     private String descripcion;
-    private String estado;
 
-    public clsSintoma() {
+    public clsPregunta() {
     }
 
-    public int getIdSintoma() {
-        return idSintoma;
+    public int getIdPregunta() {
+        return idPregunta;
     }
 
-    public void setIdSintoma(int idSintoma) {
-        this.idSintoma = idSintoma;
+    public void setIdPregunta(int idPregunta) {
+        this.idPregunta = idPregunta;
     }
 
     public String getDescripcion() {
@@ -32,14 +31,6 @@ public class clsSintoma {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
-    }
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
     }
     
     
