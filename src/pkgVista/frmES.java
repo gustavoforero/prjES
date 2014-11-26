@@ -53,9 +53,8 @@ public class frmES extends javax.swing.JFrame {
         btnAgregarEquipo = new javax.swing.JButton();
         jmbPrincipal = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        jmenTablaEquipo = new javax.swing.JMenuItem();
+        jmenTablaDiagnostico = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -220,19 +219,18 @@ public class frmES extends javax.swing.JFrame {
 
         jMenu1.setText("Tablas");
 
-        jMenuItem1.setText("Tabla Equipos ");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        jmenTablaEquipo.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_MASK));
+        jmenTablaEquipo.setText("Tabla Equipos ");
+        jmenTablaEquipo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                jmenTablaEquipoActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        jMenu1.add(jmenTablaEquipo);
 
-        jMenuItem2.setText("Tabla Diagnostico");
-        jMenu1.add(jMenuItem2);
-
-        jMenuItem3.setText("Tabla Sintomas");
-        jMenu1.add(jMenuItem3);
+        jmenTablaDiagnostico.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.CTRL_MASK));
+        jmenTablaDiagnostico.setText("Tabla Diagnostico");
+        jMenu1.add(jmenTablaDiagnostico);
 
         jmbPrincipal.add(jMenu1);
 
@@ -283,9 +281,9 @@ public class frmES extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtFuentePActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void jmenTablaEquipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmenTablaEquipoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_jmenTablaEquipoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -326,11 +324,10 @@ public class frmES extends javax.swing.JFrame {
     private javax.swing.JButton btnAgregarEquipo;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JDesktopPane jdpPrincipal;
     private javax.swing.JMenuBar jmbPrincipal;
+    private javax.swing.JMenuItem jmenTablaDiagnostico;
+    private javax.swing.JMenuItem jmenTablaEquipo;
     private javax.swing.JLabel lblBoard;
     private javax.swing.JLabel lblDatosdelEquipo;
     private javax.swing.JLabel lblDiscoD;
