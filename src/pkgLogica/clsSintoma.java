@@ -13,7 +13,7 @@ public class clsSintoma {
     
     private int idSintoma;
     private String descripcion;
-    private String estado;
+    private boolean estado;
 
     public clsSintoma() {
     }
@@ -34,14 +34,15 @@ public class clsSintoma {
         this.descripcion = descripcion;
     }
 
-    public String getEstado() {
+    public boolean isEstado() {
         return estado;
     }
 
-    public void setEstado(String estado) {
+    public void setEstado(boolean estado) {
         this.estado = estado;
     }
-    
+
+      
     
     
 }

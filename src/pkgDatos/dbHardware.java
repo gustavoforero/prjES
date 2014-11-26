@@ -22,14 +22,13 @@ public class dbHardware {
         cn = new dbConexion();
     }
     
-     public clsHardware getContactoById(int id){
+     public clsHardware getHardwareById(int id){
         clsHardware hardware = new clsHardware();
         
         try {
             PreparedStatement pstm = cn.getConexion().prepareStatement("SELECT * FROM hardware " +
                                                                           "WHERE idhardware = ? ");
-            pstm.setInt(1, id);
-            dbDiagnostico dbc = new dbDiagnostico();
+            pstm.setInt(1, id);            
             
             ResultSet res = pstm.executeQuery();
             if(res.next()){
@@ -71,32 +70,21 @@ public class dbHardware {
         clsHardware[] data = new clsHardware[registros];
         try{
             PreparedStatement pstm = cn.getConexion().prepareStatement(
-                               "SELECT idcontacto, " +
+                               "SELECT idhardware, " +
                                " nombre, " +
-                               " apellido, " +
-                               " telefono_domicilio, " +
-                               " telefono_oficina," +
-                               " celular, " +
-                               " correo, " +
-                               " direccion_residencia," +
-                               " direccion_trabajo " +
-                               " FROM contactos " + 
-                               " ORDER BY nombre, apellido ");
+                               " descripcion, " +
+                               " estado " +
+                               " FROM hardware " + 
+                               " ORDER BY idhardware");
             
             ResultSet res = pstm.executeQuery();
             int i = 0;
             while(res.next()){
-                data[i] = new clsContacto();
-                data[i].setId(res.getInt("idcontacto"));
+                data[i] = new clsHardware();
+                data[i].setIdHardware(res.getInt("idhardware"));
                 data[i].setNombre(res.getString("nombre"));
-                data[i].setApellido(res.getString("apellido"));
-                data[i].setTelefonoDomicilio(res.getString("telefono_domicilio"));
-                data[i].setTelefonoOficina(res.getString("telefono_oficina"));
-                data[i].setCelular(res.getString("celular"));
-                data[i].setCorreo(res.getString("correo"));
-                data[i].setDireccionResidencia(res.getString("direccion_residencia"));
-                data[i].setDireccionTrabajo(res.getString(
-                                     "direccion_trabajo"));                  
+                data[i].setDescripcion(res.getString("descripcion"));
+                data[i].setEstado(res.getBoolean("estado"));                
                 i++;
             }
             res.close(); 
@@ -107,41 +95,31 @@ public class dbHardware {
         return data;
     }
      
-    public int insertarContacto(clsUsuario u){
-        int cont_usuario = -1;
+    public int insertarHardware(clsHardware hardware){
+        int cont_hardware = -1;
         int resultado = 0;//no hubo errores de validacion
         try{
             PreparedStatement pstm = cn.getConexion().prepareStatement(
                                       "select count(1) as cont " +
-                                      " from contactos " +
-                                      " where correo = ? ");
-            pstm.setString(1, u.getCorreo());
+                                      " from hardware " +
+                                      " where descripcion = ? ");
+            pstm.setString(1, hardware.getDescripcion());
 
             ResultSet res = pstm.executeQuery();
             res.next();
-            cont_usuario = res.getInt("cont");
+            cont_hardware = res.getInt("cont");
             res.close();
             
             
-            if(cont_usuario==0){
+            if(cont_hardware==0){
                 pstm = cn.getConexion().prepareStatement(
-                                   "insert into contactos (nombre, " +
-                                   " apellido," +
-                                   " telefono_domicilio," +
-                                   " telefono_oficina," +
-                                   " celular," +
-                                   " correo," +
-                                   " direccion_residencia," +
-                                   " direccion_trabajo) " +
-                                   " values(?,?,?,?,?,?,?,?)");
-                pstm.setString(1, c.getNombre());
-                pstm.setString(2, c.getApellido());
-                pstm.setString(3, c.getTelefonoDomicilio());
-                pstm.setString(4, c.getTelefonoOficina());
-                pstm.setString(5, c.getCelular());
-                pstm.setString(6, c.getCorreo());
-                pstm.setString(7, c.getDireccionResidencia());
-                pstm.setString(8, c.getDireccionTrabajo());
+                                   "insert into hardware (nombre, " +
+                                   " descripcion," +
+                                   " estado)" +                                   
+                                   " values(?,?,?)");
+                pstm.setString(1, hardware.getNombre());
+                pstm.setString(2, hardware.getDescripcion());
+                pstm.setBoolean(3, hardware.isEstado());                
                 
                 pstm.executeUpdate();
                     
@@ -159,29 +137,19 @@ public class dbHardware {
         return resultado;
     }
     
-    public int actualizarContacto(clsUsuario u){
+    public int actualizarHardware(clsHardware hardware){
         int resultado = 0;
         try{
             PreparedStatement pstm = cn.getConexion().prepareStatement(
-                                       "update contactos " +
+                                       "update hardware " +
                                        " set nombre = ?, " +
-                                       " apellido = ?," +
-                                       " telefono_domicilio = ?," +
-                                       " telefono_oficina = ?," +
-                                       " celular = ?," +
-                                       " correo = ?," +
-                                       " direccion_residencia = ?," +
-                                       " direccion_trabajo = ? " +
-                                       " where idcontacto = ?");
-            pstm.setString(1, c.getNombre());
-            pstm.setString(2, c.getApellido());
-            pstm.setString(3, c.getTelefonoDomicilio());
-            pstm.setString(4, c.getTelefonoOficina());
-            pstm.setString(5, c.getCelular());
-            pstm.setString(6, c.getCorreo());
-            pstm.setString(7, c.getDireccionResidencia());
-            pstm.setString(8, c.getDireccionTrabajo());
-            pstm.setInt(9, c.getId());
+                                       " descripcion = ?," +
+                                       " estado = ?" +
+                                       " where idhardware = ?");
+            pstm.setString(1, hardware.getNombre());
+            pstm.setString(2, hardware.getDescripcion());
+            pstm.setBoolean(3, hardware.isEstado());            
+            pstm.setInt(4, hardware.getIdHardware());
 
             resultado = pstm.executeUpdate();
                 
@@ -191,14 +159,14 @@ public class dbHardware {
         return resultado;
     }
     
-    public int borrarContacto(clsUsuario u){
+    public int borrarHardware(clsHardware hardware){
         int resultado = 0;
         try{
             PreparedStatement pstm = cn.getConexion().prepareStatement(
-                                           "delete from contactos " +
-                                           " where idcontacto = ?");
+                                           "delete from hardware " +
+                                           " where idhardware = ?");
             
-            pstm.setInt(1, c.getId());
+            pstm.setInt(1, hardware.getIdHardware());
 
             resultado = pstm.executeUpdate();
                     
