@@ -28,27 +28,50 @@ public class jdDiagnostico extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jpnDiagnistico = new javax.swing.JPanel();
         lblDiagnostico = new javax.swing.JLabel();
+        btnAceptar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
+        jpnDiagnistico.setBackground(new java.awt.Color(204, 204, 255));
+
         lblDiagnostico.setText("Aquí va el diagnóstico");
+
+        btnAceptar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pkgImagenes/tick_48.png"))); // NOI18N
+
+        javax.swing.GroupLayout jpnDiagnisticoLayout = new javax.swing.GroupLayout(jpnDiagnistico);
+        jpnDiagnistico.setLayout(jpnDiagnisticoLayout);
+        jpnDiagnisticoLayout.setHorizontalGroup(
+            jpnDiagnisticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpnDiagnisticoLayout.createSequentialGroup()
+                .addGap(159, 159, 159)
+                .addGroup(jpnDiagnisticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblDiagnostico))
+                .addContainerGap(184, Short.MAX_VALUE))
+        );
+        jpnDiagnisticoLayout.setVerticalGroup(
+            jpnDiagnisticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpnDiagnisticoLayout.createSequentialGroup()
+                .addContainerGap(85, Short.MAX_VALUE)
+                .addComponent(lblDiagnostico)
+                .addGap(35, 35, 35)
+                .addComponent(btnAceptar)
+                .addGap(28, 28, 28))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(120, 120, 120)
-                .addComponent(lblDiagnostico)
-                .addContainerGap(143, Short.MAX_VALUE))
+                .addComponent(jpnDiagnistico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(123, 123, 123)
-                .addComponent(lblDiagnostico)
-                .addContainerGap(162, Short.MAX_VALUE))
+            .addComponent(jpnDiagnistico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -97,6 +120,8 @@ public class jdDiagnostico extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAceptar;
+    private javax.swing.JPanel jpnDiagnistico;
     private javax.swing.JLabel lblDiagnostico;
     // End of variables declaration//GEN-END:variables
 }

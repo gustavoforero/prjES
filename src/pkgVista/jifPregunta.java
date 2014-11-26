@@ -27,41 +27,62 @@ public class jifPregunta extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jplResponder = new javax.swing.JPanel();
         lblPregunta = new javax.swing.JLabel();
-        btnSi = new javax.swing.JButton();
         btnNo = new javax.swing.JButton();
+        btnSi = new javax.swing.JButton();
 
-        lblPregunta.setText("Aquí va la pregunta");
+        setBackground(new java.awt.Color(204, 204, 255));
+        setTitle("RESPONDER...");
 
+        jplResponder.setBackground(new java.awt.Color(204, 204, 255));
+
+        lblPregunta.setText("¿¿¿¿¿¿Aquí va la pregunta????????");
+
+        btnNo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pkgImagenes/delete_16.png"))); // NOI18N
+        btnNo.setText("No");
+
+        btnSi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pkgImagenes/tick_16.png"))); // NOI18N
         btnSi.setText("Sí");
 
-        btnNo.setText("No");
+        javax.swing.GroupLayout jplResponderLayout = new javax.swing.GroupLayout(jplResponder);
+        jplResponder.setLayout(jplResponderLayout);
+        jplResponderLayout.setHorizontalGroup(
+            jplResponderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jplResponderLayout.createSequentialGroup()
+                .addGap(63, 63, 63)
+                .addComponent(btnSi, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
+                .addComponent(btnNo, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(72, 72, 72))
+            .addGroup(jplResponderLayout.createSequentialGroup()
+                .addGap(153, 153, 153)
+                .addComponent(lblPregunta)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jplResponderLayout.setVerticalGroup(
+            jplResponderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jplResponderLayout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(lblPregunta)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addGroup(jplResponderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSi)
+                    .addComponent(btnNo))
+                .addGap(38, 38, 38))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(88, 88, 88)
-                .addComponent(btnSi)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)
-                .addComponent(btnNo)
-                .addGap(99, 99, 99))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(124, 124, 124)
-                .addComponent(lblPregunta)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jplResponder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(84, Short.MAX_VALUE)
-                .addComponent(lblPregunta)
-                .addGap(81, 81, 81)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnNo)
-                    .addComponent(btnSi))
-                .addGap(67, 67, 67))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jplResponder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
 
         pack();
@@ -71,6 +92,7 @@ public class jifPregunta extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnNo;
     private javax.swing.JButton btnSi;
+    private javax.swing.JPanel jplResponder;
     private javax.swing.JLabel lblPregunta;
     // End of variables declaration//GEN-END:variables
 }
