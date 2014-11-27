@@ -1,19 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package pkgVista;
 
-/**
- *
- * @author Angie Perez
- */
 public class jifTablaDiagnostico extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form jifTablaDiagnostico
-     */
     public jifTablaDiagnostico() {
         initComponents();
     }
@@ -54,6 +43,11 @@ public class jifTablaDiagnostico extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(tblDiagnostico);
 
         btnAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pkgImagenes/left_48.png"))); // NOI18N
+        btnAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAtrasActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -99,6 +93,10 @@ public class jifTablaDiagnostico extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnAtrasActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -7,16 +7,11 @@ package pkgVista;
 
 import pkgDatos.dbConexion;
 
-/**
- *
- * @author kiritoxcii
- */
+
 public class frmES extends javax.swing.JFrame {
 
-    /**
-     * Creates new form frmES
-     */
-    
+    jifTablaDiagnostico tablaDiagnostico;
+    jifPregunta pregunta;
     dbConexion con;
     
     public frmES() {
@@ -35,207 +30,87 @@ public class frmES extends javax.swing.JFrame {
     private void initComponents() {
 
         jdpPrincipal = new javax.swing.JDesktopPane();
-        lblMarca = new javax.swing.JLabel();
-        lblRam = new javax.swing.JLabel();
-        lblModelo = new javax.swing.JLabel();
-        lblBoard = new javax.swing.JLabel();
-        lblProcesador = new javax.swing.JLabel();
-        lblDiscoD = new javax.swing.JLabel();
-        txtMarca = new javax.swing.JTextField();
-        txtModelo = new javax.swing.JTextField();
-        txtRam = new javax.swing.JTextField();
-        txtBoard = new javax.swing.JTextField();
-        txtProcesador = new javax.swing.JTextField();
-        txtDiscoD = new javax.swing.JTextField();
-        lblFuenteP = new javax.swing.JLabel();
-        txtFuenteP = new javax.swing.JTextField();
-        lblDatosdelEquipo = new javax.swing.JLabel();
-        btnAgregarEquipo = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jlSintomas = new javax.swing.JList();
+        lblSintomas = new javax.swing.JLabel();
+        btnBuscar = new javax.swing.JButton();
         jmbPrincipal = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jmenTablaEquipo = new javax.swing.JMenuItem();
         jmenTablaDiagnostico = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jdpPrincipal.setBackground(new java.awt.Color(204, 204, 255));
 
-        lblMarca.setText("Marca:");
+        jlSintomas.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(jlSintomas);
 
-        lblRam.setText("RAM:");
+        lblSintomas.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        lblSintomas.setText("SÍNTOMAS");
 
-        lblModelo.setText("Modelo:");
-
-        lblBoard.setText("Board:");
-
-        lblProcesador.setText("Procesador:");
-
-        lblDiscoD.setText("Disco Duro:");
-
-        txtMarca.addActionListener(new java.awt.event.ActionListener() {
+        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pkgImagenes/search_48.png"))); // NOI18N
+        btnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtMarcaActionPerformed(evt);
+                btnBuscarActionPerformed(evt);
             }
         });
-
-        txtModelo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtModeloActionPerformed(evt);
-            }
-        });
-
-        txtRam.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtRamActionPerformed(evt);
-            }
-        });
-
-        txtBoard.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtBoardActionPerformed(evt);
-            }
-        });
-
-        txtProcesador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtProcesadorActionPerformed(evt);
-            }
-        });
-
-        txtDiscoD.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDiscoDActionPerformed(evt);
-            }
-        });
-
-        lblFuenteP.setText("Fuente de Poder:");
-
-        txtFuenteP.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtFuentePActionPerformed(evt);
-            }
-        });
-
-        lblDatosdelEquipo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        lblDatosdelEquipo.setText("DATOS DEL EQUIPO...");
-
-        btnAgregarEquipo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pkgImagenes/save_48.png"))); // NOI18N
 
         javax.swing.GroupLayout jdpPrincipalLayout = new javax.swing.GroupLayout(jdpPrincipal);
         jdpPrincipal.setLayout(jdpPrincipalLayout);
         jdpPrincipalLayout.setHorizontalGroup(
             jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jdpPrincipalLayout.createSequentialGroup()
-                .addGap(41, 41, 41)
                 .addGroup(jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblMarca)
-                    .addComponent(lblModelo)
-                    .addComponent(lblBoard)
-                    .addComponent(lblRam)
                     .addGroup(jdpPrincipalLayout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addGroup(jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblDiscoD)
-                            .addComponent(lblFuenteP)
-                            .addComponent(lblProcesador))))
-                .addGap(72, 72, 72)
-                .addGroup(jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnAgregarEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(txtDiscoD, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtProcesador, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtRam, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtBoard, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtModelo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(txtMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtFuenteP, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(79, Short.MAX_VALUE))
-            .addGroup(jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jdpPrincipalLayout.createSequentialGroup()
-                    .addGap(51, 51, 51)
-                    .addComponent(lblDatosdelEquipo)
-                    .addContainerGap(291, Short.MAX_VALUE)))
+                        .addGap(27, 27, 27)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 569, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jdpPrincipalLayout.createSequentialGroup()
+                        .addGap(256, 256, 256)
+                        .addComponent(lblSintomas))
+                    .addGroup(jdpPrincipalLayout.createSequentialGroup()
+                        .addGap(228, 228, 228)
+                        .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(88, Short.MAX_VALUE))
         );
         jdpPrincipalLayout.setVerticalGroup(
             jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jdpPrincipalLayout.createSequentialGroup()
-                .addGap(91, 91, 91)
-                .addGroup(jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtMarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblMarca))
+                .addGap(21, 21, 21)
+                .addComponent(lblSintomas)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jdpPrincipalLayout.createSequentialGroup()
-                        .addComponent(txtModelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtRam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtBoard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtProcesador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(13, 13, 13)
-                        .addComponent(txtDiscoD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtFuenteP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jdpPrincipalLayout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(lblModelo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lblRam)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lblBoard)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lblProcesador)
-                        .addGap(20, 20, 20)
-                        .addComponent(lblDiscoD)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblFuenteP)))
-                .addGap(36, 36, 36)
-                .addComponent(btnAgregarEquipo)
-                .addGap(0, 26, Short.MAX_VALUE))
-            .addGroup(jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jdpPrincipalLayout.createSequentialGroup()
-                    .addGap(46, 46, 46)
-                    .addComponent(lblDatosdelEquipo)
-                    .addContainerGap(333, Short.MAX_VALUE)))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnBuscar)
+                .addContainerGap(13, Short.MAX_VALUE))
         );
-        jdpPrincipal.setLayer(lblMarca, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpPrincipal.setLayer(lblRam, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpPrincipal.setLayer(lblModelo, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpPrincipal.setLayer(lblBoard, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpPrincipal.setLayer(lblProcesador, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpPrincipal.setLayer(lblDiscoD, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpPrincipal.setLayer(txtMarca, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpPrincipal.setLayer(txtModelo, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpPrincipal.setLayer(txtRam, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpPrincipal.setLayer(txtBoard, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpPrincipal.setLayer(txtProcesador, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpPrincipal.setLayer(txtDiscoD, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpPrincipal.setLayer(lblFuenteP, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpPrincipal.setLayer(txtFuenteP, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpPrincipal.setLayer(lblDatosdelEquipo, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpPrincipal.setLayer(btnAgregarEquipo, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpPrincipal.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpPrincipal.setLayer(lblSintomas, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpPrincipal.setLayer(btnBuscar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jMenu1.setText("Tablas");
 
-        jmenTablaEquipo.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_MASK));
-        jmenTablaEquipo.setText("Tabla Equipos ");
-        jmenTablaEquipo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmenTablaEquipoActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jmenTablaEquipo);
-
         jmenTablaDiagnostico.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.CTRL_MASK));
         jmenTablaDiagnostico.setText("Tabla Diagnostico");
+        jmenTablaDiagnostico.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jmenTablaDiagnosticoMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jmenTablaDiagnosticoMouseReleased(evt);
+            }
+        });
+        jmenTablaDiagnostico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmenTablaDiagnosticoActionPerformed(evt);
+            }
+        });
         jMenu1.add(jmenTablaDiagnostico);
 
         jmbPrincipal.add(jMenu1);
-
-        jMenu2.setText("Ventanas");
-        jmbPrincipal.add(jMenu2);
 
         setJMenuBar(jmbPrincipal);
 
@@ -243,7 +118,7 @@ public class frmES extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jdpPrincipal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jdpPrincipal)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -251,39 +126,37 @@ public class frmES extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtMarcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMarcaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMarcaActionPerformed
+    private void jmenTablaDiagnosticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmenTablaDiagnosticoActionPerformed
+    
+    }//GEN-LAST:event_jmenTablaDiagnosticoActionPerformed
 
-    private void txtModeloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtModeloActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtModeloActionPerformed
+    private void jmenTablaDiagnosticoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jmenTablaDiagnosticoMousePressed
+         tablaDiagnostico = new jifTablaDiagnostico();
+            
+            tablaDiagnostico.setResizable(true);
+            tablaDiagnostico.setMaximizable(true);
+            tablaDiagnostico.setIconifiable(true);
+            tablaDiagnostico.setClosable(true);  
+            jdpPrincipal.add(tablaDiagnostico);
+            tablaDiagnostico.show();
+    }//GEN-LAST:event_jmenTablaDiagnosticoMousePressed
 
-    private void txtRamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRamActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtRamActionPerformed
+    private void jmenTablaDiagnosticoMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jmenTablaDiagnosticoMouseReleased
+        
+    }//GEN-LAST:event_jmenTablaDiagnosticoMouseReleased
 
-    private void txtBoardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBoardActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtBoardActionPerformed
-
-    private void txtProcesadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtProcesadorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtProcesadorActionPerformed
-
-    private void txtDiscoDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDiscoDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDiscoDActionPerformed
-
-    private void txtFuentePActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFuentePActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtFuentePActionPerformed
-
-    private void jmenTablaEquipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmenTablaEquipoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jmenTablaEquipoActionPerformed
+    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
+      pregunta = new jifPregunta();
+      pregunta.setResizable(true);
+            pregunta.setMaximizable(true);
+            pregunta.setIconifiable(true);
+            pregunta.setClosable(true);  
+            jdpPrincipal.add(pregunta);
+           pregunta.show();
+    }//GEN-LAST:event_btnBuscarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -315,34 +188,20 @@ public class frmES extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmES().setVisible(false);
+                new frmES().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAgregarEquipo;
+    private javax.swing.JButton btnBuscar;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JDesktopPane jdpPrincipal;
+    private javax.swing.JList jlSintomas;
     private javax.swing.JMenuBar jmbPrincipal;
     private javax.swing.JMenuItem jmenTablaDiagnostico;
-    private javax.swing.JMenuItem jmenTablaEquipo;
-    private javax.swing.JLabel lblBoard;
-    private javax.swing.JLabel lblDatosdelEquipo;
-    private javax.swing.JLabel lblDiscoD;
-    private javax.swing.JLabel lblFuenteP;
-    private javax.swing.JLabel lblMarca;
-    private javax.swing.JLabel lblModelo;
-    private javax.swing.JLabel lblProcesador;
-    private javax.swing.JLabel lblRam;
-    private javax.swing.JTextField txtBoard;
-    private javax.swing.JTextField txtDiscoD;
-    private javax.swing.JTextField txtFuenteP;
-    private javax.swing.JTextField txtMarca;
-    private javax.swing.JTextField txtModelo;
-    private javax.swing.JTextField txtProcesador;
-    private javax.swing.JTextField txtRam;
+    private javax.swing.JLabel lblSintomas;
     // End of variables declaration//GEN-END:variables
 /*
     Agregar un internal frame a un desktop pane
